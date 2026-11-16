@@ -45,11 +45,11 @@ const projects = [
     },
 
     links: {
-      thingspeak: "https://thingspeak.mathworks.com/channels/357819",
+      thingspeak: "https://thingspeak.mathworks.com/channels/3578195",
     },
 
     thingspeak: {
-      channelId: "357819",
+      channelId: "3578195",
       readApiKey: "",
       results: 20,
       refreshInterval: 20000,
@@ -234,7 +234,7 @@ const projects = [
         "Módulo I2C",
         "Fios de conexão"
     ],
-    status: "Concluído",
+    status: "Projeto desenvolvido",
     metadata: {
         institution: "Etec de Campo Limpo Paulista",
         course: "Informática para a Internet integrado ao Ensino Médio",
@@ -486,24 +486,76 @@ const projects = [
   {
     id: 10,
     group: "Grupo 10",
-    title: "Projeto 10 - informações em cadastro",
-    description:
-      "As informações deste projeto serão adicionadas após o recebimento dos dados do grupo.",
-    objective: "",
-    operation: "",
-    students: [],
-    teachers: [
-      "Barbara Kathellen Andrade Porfirio",
-      "Thaynara Cristina Maia dos Santos",
+    title: "Bicicletário Inteligente: Monitoramento da Ocupação de Vagas com ESP32, Wokwi e ThingSpeak",
+    description: "Sistema de monitoramento da ocupação de quatro vagas de um bicicletário utilizando ESP32, sensores de presença simulados por chaves deslizantes e LEDs indicadores, com armazenamento e visualização dos dados na nuvem por meio da plataforma ThingSpeak.",
+    objective: "Desenvolver um sistema de bicicletário inteligente capaz de monitorar a ocupação de quatro vagas, identificando a quantidade de vagas ocupadas e livres, calculando a taxa de ocupação e contabilizando o total de entradas de bicicletas, com envio, armazenamento e visualização dos dados na nuvem.",
+    operation: "O ESP32 simulado no Wokwi realiza a leitura de quatro chaves deslizantes, que representam sensores de presença instalados nas vagas do bicicletário. Quando uma chave está ligada ao GND, a respectiva vaga é considerada ocupada, e o LED vermelho correspondente é aceso. O microcontrolador calcula a quantidade de vagas ocupadas, vagas livres, taxa de ocupação percentual e total acumulado de entradas de bicicletas. Em seguida, conecta-se à rede Wi-Fi simulada Wokwi-GUEST e envia os dados ao ThingSpeak por meio de uma requisição HTTP GET. O envio ocorre periodicamente a cada 20 segundos ou após mudanças no estado das vagas, respeitando o intervalo mínimo configurado de 16 segundos. O sistema também possui um modo automático que simula chegadas e saídas de bicicletas em intervalos aleatórios, permitindo visualizar as alterações na ocupação.",
+    students: [
+        "Murilo Victor Fernandes de Carvalho",
+        "Otávio Medeiros Fuentes Garcia",
+        "Lucas Souza Santos"
     ],
-    sensors: [],
-    technologies: [],
-    components: [],
-    status: "Aguardando cadastro",
-    metadata: {},
-    links: {},
-    thingspeak: null,
-  },
+    teachers: [
+        "Barbara Kathellen Andrade Porfirio",
+        "Thaynara Cristina Maia dos Santos"
+    ],
+    sensors: [
+        "4x Chaves deslizantes"
+    ],
+    technologies: [
+        "ESP32",
+        "Wokwi",
+        "ThingSpeak",
+    ],
+    components: [
+        "ESP32",
+        "4 chaves deslizantes",
+        "4 LEDs vermelhos",
+        "4 resistores de 220 Ω"
+    ],
+    status: "Projeto desenvolvido",
+    metadata: {
+        institution: "Etec de Campo Limpo Paulista",
+        course: "Informática para a Internet integrado ao Ensino Médio",
+        platform: "ThingSpeak",
+        projectName: "BikeSense",
+        group: "Grupo 10",
+        updateInterval: "20 segundos",
+        minimumUpdateInterval: "16 segundos",
+        sensorPin: "GPIO 13, GPIO 14, GPIO 27 e GPIO 26 (ESP32)",
+        ledPins: "GPIO 4, GPIO 16, GPIO 17 e GPIO 18 (ESP32)",
+        sensorReadingMethod: "Leitura digital utilizando INPUT_PULLUP",
+        measurementRange: "0 a 4 vagas ocupadas; 0% a 100% de ocupação",
+        measurementMethod: "Contagem de vagas ocupadas e livres, cálculo percentual da ocupação e contagem acumulada de entradas",
+        simulationMode: "Automático, com mudanças aleatórias na ocupação das vagas",
+        automaticSimulationInterval: "Entre 6 e 15 segundos para cada possível mudança",
+        wifiNetwork: "Wokwi-GUEST",
+        communicationProtocol: "HTTP GET",
+        observation: "As chaves deslizantes simulam sensores de presença. Os dados são gerados em ambiente virtual e não representam a ocupação de um bicicletário físico.",
+        collectionResults: "7 registros enviados em aproximadamente 10 minutos",
+        averageOccupancy: "67,9%",
+        maximumOccupancy: "100%",
+        minimumOccupancy: "50%",
+        totalEntries: "4 bicicletas"
+    },
+    links: {
+        wokwi: "https://wokwi.com/projects/480781744121502721",
+        thingspeak: "https://thingspeak.mathworks.com/channels/3580087"
+    },
+    thingspeak: {
+        channelId: "3580087",
+        writeApiKey: "",
+        readApiKey: "",
+        results: 20,
+        refreshInterval: 20000,
+        fields: [
+            { number: 1, name: "Vagas ocupadas", unit: "vagas" },
+            { number: 2, name: "Vagas livres", unit: "vagas" },
+            { number: 3, name: "Taxa de ocupação", unit: "%" },
+            { number: 4, name: "Total de entradas", unit: "bicicletas" }
+        ]
+    }
+},
   {
     id: 11,
     group: "Grupo 11",

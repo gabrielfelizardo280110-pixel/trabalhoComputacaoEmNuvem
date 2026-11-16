@@ -223,3 +223,49 @@ body.dark-theme .status-pill { color: #9ce0b7; background: #173e35; }
     .detail-top { align-items: flex-start; flex-direction: column; }
     .footer-content { align-items: flex-start; flex-direction: column; }
 }
+
+/* Layout mais compacto e melhor aproveitamento das telas largas. */
+.header-content,
+.footer-content { max-width: 1360px; }
+.header-content { min-height: 64px; justify-content: flex-start; gap: 22px; }
+.main-nav { margin-left: 0; gap: 6px; }
+.theme-toggle { margin-left: auto; }
+.page-section { max-width: 1360px; padding: 0 32px 36px; }
+.hero { min-height: 0; gap: 28px; padding: 30px 0 32px; }
+.hero-panel { height: 300px; }
+.content-section { padding: 26px 0; }
+.soft-section { margin: 4px -16px; padding: 28px 24px; }
+.section-heading { margin-bottom: 16px; }
+.info-grid, .concept-grid { gap: 12px; }
+.info-card, .concept-card, .detail-card, .project-card, .chart-card { padding: 18px; }
+.info-symbol { margin-bottom: 9px; }
+.page-banner { padding: 30px 0 18px; }
+.projects-toolbar { margin: 12px 0; }
+.project-card { min-height: 200px; }
+.detail-heading { padding: 16px 0 18px; }
+.detail-layout { gap: 12px; }
+.detail-main, .detail-side { gap: 10px; }
+.data-section { margin-top: 20px; padding-top: 20px; }
+.data-heading { margin-bottom: 12px; }
+.about-content { gap: 10px; padding: 8px 0 20px; }
+.footer-content { padding: 18px 32px; }
+
+@media (max-width: 850px) {
+    .page-section { padding-left: 24px; padding-right: 24px; }
+    .hero { padding: 28px 0 30px; }
+    .content-section { padding: 24px 0; }
+}
+
+@media (max-width: 620px) {
+    .header-content { min-height: 66px; }
+    .header-content { justify-content: space-between; gap: 8px; }
+    .main-nav { margin-left: 0; }
+    .theme-toggle { margin-left: 0; }
+    .page-section { padding-left: 17px; padding-right: 17px; padding-bottom: 36px; }
+    .hero { gap: 24px; padding: 32px 0; }
+    .content-section { padding: 28px 0; }
+    .soft-section { margin: 0 -8px; padding: 28px 17px; }
+    .page-banner { padding: 32px 0 20px; }
+    .detail-heading { padding: 18px 0 20px; }
+    .footer-content { padding: 20px 17px; }
+}

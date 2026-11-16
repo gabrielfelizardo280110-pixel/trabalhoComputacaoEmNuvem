@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="IoT Connect - Central de integração e visualização dos projetos de Internet das Coisas."
+    />
+    <title>IoT Connect | Central de Projetos IoT</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <a
+          class="brand"
+          href="#"
+          data-page="home"
+          aria-label="IoT Connect - início"
+        >
+          <span class="brand-mark">IoT</span>
+          <span>IoT Connect</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+          <button class="nav-link active" data-page="home">Início</button>
+          <button class="nav-link" data-page="projects">Projetos</button>
+          <button class="nav-link" data-page="about">Sobre</button>
+        </nav>
+
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Alternar tema"
+        >
+          ◐
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- INÍCIO -->
+      <section class="page-section active" id="homePage">
+        <div class="hero">
+          <div class="hero-content">
+            <span class="eyebrow">CENTRAL DE INTEGRAÇÃO IoT</span>
+            <h1>Conectando projetos.<br /><span>Transformando dados.</span></h1>
+            <p>
+              Uma plataforma central para reunir, acompanhar e visualizar os
+              dados dos projetos de Internet das Coisas desenvolvidos pelas
+              equipes.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-page="projects">
+                Explorar projetos
+              </button>
+              <button class="btn btn-secondary" data-page="about">
+                Conhecer a plataforma
+              </button>
+            </div>
+          </div>
+          <div
+            class="hero-panel"
+            aria-label="Ilustração conceitual de dispositivos conectados"
+          >
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="hub-circle"><span>IoT</span><small>CONNECT</small></div>
+            <span class="node node-one">ESP</span>
+            <span class="node node-two">☁</span>
+            <span class="node node-three">DATA</span>
+            <span class="node node-four">Wi-Fi</span>
+          </div>
+        </div>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <span class="eyebrow">SOBRE A INICIATIVA</span>
+            <h2>O objetivo do IoT Connect</h2>
+            <p>
+              Centralizar os projetos e facilitar o acesso às informações
+              coletadas pelos dispositivos.
+            </p>
+          </div>
+          <div class="info-grid">
+            <article class="info-card">
+              <div class="info-symbol">01</div>
+              <h3>Integração</h3>
+              <p>
+                Reunir em um único ambiente os 11 projetos desenvolvidos pelos
+                grupos.
+              </p>
+            </article>
+            <article class="info-card">
+              <div class="info-symbol">02</div>
+              <h3>Monitoramento</h3>
+              <p>
+                Apresentar os dados enviados pelos dispositivos para a
+                plataforma ThingSpeak.
+              </p>
+            </article>
+            <article class="info-card">
+              <div class="info-symbol">03</div>
+              <h3>Visualização</h3>
+              <p>
+                Facilitar a leitura dos dados por meio de indicadores e gráficos
+                históricos.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section soft-section">
+          <div class="section-heading">
+            <span class="eyebrow">CONCEITOS FUNDAMENTAIS</span>
+            <h2>O que está por trás dos projetos?</h2>
+          </div>
+          <div class="concept-grid">
+            <article class="concept-card">
+              <h3>Internet das Coisas (IoT)</h3>
+              <p>
+                É o conceito de conectar objetos físicos à internet para
+                coletar, enviar e receber informações. Sensores capturam dados
+                do ambiente e dispositivos conectados podem transmiti-los para
+                análise.
+              </p>
+            </article>
+            <article class="concept-card">
+              <h3>Computação em nuvem</h3>
+              <p>
+                É o fornecimento de recursos e serviços computacionais pela
+                internet. Neste projeto, a nuvem permite armazenar e consultar
+                os dados enviados pelos dispositivos, mesmo à distância.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <span class="eyebrow">PARTICIPAÇÃO</span>
+            <h2>11 projetos em uma única plataforma</h2>
+            <p>
+              Os projetos serão apresentados conforme as informações fornecidas
+              por cada equipe.
+            </p>
+          </div>
+          <div class="group-strip">
+            <div><strong>11</strong><span>projetos integrados</span></div>
+            <div><strong>01</strong><span>plataforma central</span></div>
+            <div><strong>12</strong><span>grupo integrador</span></div>
+          </div>
+          <div class="center-action">
+            <button class="btn btn-primary" data-page="projects">
+              Ver todos os projetos
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <!-- PROJETOS -->
+      <section class="page-section" id="projectsPage">
+        <div class="page-banner">
+          <span class="eyebrow">CENTRAL DE PROJETOS</span>
+          <h1>Projetos integrados</h1>
+          <p>
+            Conheça as propostas desenvolvidas pelos grupos e acesse os dados de
+            monitoramento disponíveis.
+          </p>
+        </div>
+
+        <div class="projects-toolbar">
+          <div>
+            <h2>Todos os projetos</h2>
+            <p id="projectCount">11 projetos cadastrados</p>
+          </div>
+          <label class="search-box">
+            <span>⌕</span>
+            <input
+              type="search"
+              id="projectSearch"
+              placeholder="Pesquisar projeto..."
+              aria-label="Pesquisar projeto"
+            />
+          </label>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </section>
+
+      <!-- DETALHES -->
+      <section class="page-section" id="detailPage">
+        <div class="detail-top">
+          <button class="back-button" id="backToProjects">
+            ← Voltar aos projetos
+          </button>
+          <span class="status-pill" id="detailStatus">Projeto cadastrado</span>
+        </div>
+        <div class="detail-heading">
+          <span class="eyebrow" id="detailGroup">PROJETO</span>
+          <h1 id="detailTitle">Nome do projeto</h1>
+          <p id="detailDescription"></p>
+        </div>
+
+        <div class="detail-layout">
+          <div class="detail-main">
+            <article class="detail-card">
+              <h2>Objetivo</h2>
+              <p id="detailObjective"></p>
+            </article>
+            <article class="detail-card">
+              <h2>Descrição e funcionamento</h2>
+              <p id="detailOperation"></p>
+            </article>
+            <article class="detail-card">
+              <h2>Integrantes</h2>
+              <ul id="detailStudents"></ul>
+            </article>
+            <article class="detail-card">
+              <h2>Professores responsáveis</h2>
+              <ul id="detailTeachers"></ul>
+            </article>
+            <article class="detail-card">
+              <h2>Sensores e componentes</h2>
+              <ul id="detailSensors"></ul>
+            </article>
+            <article class="detail-card">
+              <h2>Tecnologias utilizadas</h2>
+              <div class="tag-list" id="detailTechnologies"></div>
+            </article>
+            <article class="detail-card">
+              <h2>Links do projeto</h2>
+              <div class="detail-links" id="detailLinks"></div>
+            </article>
+          </div>
+
+          <aside class="detail-side">
+            <article class="detail-card">
+              <h2>Informações</h2>
+              <div class="meta-list" id="detailMeta"></div>
+            </article>
+          </aside>
+        </div>
+
+        <!-- ÁREA DOS DADOS DO THINGSPEAK -->
+        <section class="data-section" id="dataSection">
+          <div class="data-heading">
+            <div>
+              <span class="eyebrow">DADOS DO DISPOSITIVO</span>
+              <h2>Monitoramento do projeto</h2>
+              <p>Valores recebidos do canal ThingSpeak.</p>
+            </div>
+            <button
+              class="btn btn-secondary btn-small"
+              id="refreshData"
+              type="button"
+            >
+              Atualizar dados
+            </button>
+          </div>
+
+          <div class="metric-grid" id="metrics"></div>
+
+          <div class="charts-grid">
+            <article class="chart-card">
+              <div class="chart-title">
+                <h3>Pessoas presentes</h3>
+                <span>Histórico</span>
+              </div>
+              <canvas id="peopleChart" height="240"></canvas>
+            </article>
+            <article class="chart-card">
+              <div class="chart-title">
+                <h3>Entradas e saídas</h3>
+                <span>Histórico</span>
+              </div>
+              <canvas id="movementChart" height="240"></canvas>
+              <div class="chart-legend">
+                <span><i class="legend-blue"></i> Entradas</span>
+                <span><i class="legend-lightblue"></i> Saídas</span>
+              </div>
+            </article>
+          </div>
+          <p class="data-status" id="dataStatus" role="status">
+            Os dados serão carregados ao abrir um projeto com canal configurado.
+          </p>
+        </section>
+      </section>
+
+      <!-- SOBRE -->
+      <section class="page-section" id="aboutPage">
+        <div class="page-banner">
+          <span class="eyebrow">SOBRE A PLATAFORMA</span>
+          <h1>Uma visão central dos projetos IoT</h1>
+          <p>
+            O IoT Connect é a plataforma integradora desenvolvida pelo Grupo 12.
+          </p>
+        </div>
+        <div class="about-content">
+          <article class="detail-card">
+            <h2>O que é o IoT Connect?</h2>
+            <p>
+              O IoT Connect é um portal que reúne as informações dos 11 projetos
+              de Internet das Coisas desenvolvidos na atividade. Seu propósito é
+              apresentar os projetos, seus objetivos, integrantes, sensores e
+              dados disponibilizados na plataforma ThingSpeak.
+            </p>
+          </article>
+          <article class="detail-card">
+            <h2>Responsabilidade do Grupo 12</h2>
+            <p>
+              O Grupo 12 é responsável por desenvolver o site central, organizar
+              as informações recebidas das equipes e integrar a visualização dos
+              dados enviados pelos dispositivos à nuvem.
+            </p>
+          </article>
+          <article class="detail-card">
+            <h2>Tecnologias da plataforma</h2>
+            <div class="tag-list">
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">JavaScript</span
+              ><span class="tag">ThingSpeak API</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>
+          <strong>IoT Connect</strong>
+          <p>Central de integração dos projetos de Internet das Coisas.</p>
+        </div>
+        <span>Grupo 12 · Projeto Integrador IoT</span>
+      </div>
+    </footer>
+
+    <script src="js/projects.js"></script>
+    <script src="js/thingspeak.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

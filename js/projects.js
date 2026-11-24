@@ -182,28 +182,70 @@ const projects = [
         ]
     }
 },
-  {
+  
+{
     id: 4,
     group: "Grupo 04",
-    title: "Projeto 04 - informações em cadastro",
-    description:
-      "As informações deste projeto serão adicionadas após o recebimento dos dados do grupo.",
-    objective: "",
-    operation: "",
-    students: [],
-    teachers: [
-      "Barbara Kathellen Andrade Porfirio",
-      "Thaynara Cristina Maia dos Santos",
+    title: "Estacionamento Inteligente",
+    description: "Sistema de monitoramento de vagas de estacionamento que utiliza sensores ultrassônicos conectados ao ESP32 para identificar vagas livres e ocupadas, calcular a taxa de ocupação e disponibilizar os dados na plataforma ThingSpeak.",
+    objective: "Desenvolver um sistema simulado capaz de monitorar três vagas de estacionamento, identificar automaticamente a presença de veículos, calcular a quantidade de vagas disponíveis e ocupadas e apresentar essas informações localmente e na nuvem.",
+    operation: "Três sensores ultrassônicos realizam a medição da distância em cada vaga de estacionamento. Quando um objeto é detectado a menos de 50 centímetros, a vaga é considerada ocupada, o LED vermelho acende e o verde permanece apagado. Quando não há objeto próximo, a vaga é considerada livre e o LED verde acende. O ESP32 calcula a quantidade de vagas livres e ocupadas e a taxa percentual de ocupação. As informações são exibidas em um display LCD 16x2 e enviadas ao ThingSpeak por meio de requisições HTTP, permitindo acompanhar as alterações em gráficos.",
+    students: [
+        "Graziele Veja dos Santos",
+        "Heloísa Moraes de Oliveira",
+        "Lucas Pierre Nascimento Arifa"
     ],
-    sensors: [],
-    technologies: [],
-    components: [],
-    status: "Aguardando cadastro",
-    metadata: {},
-    links: {},
-    thingspeak: null,
-  },
-  
+    teachers: [
+        "Barbara Kathellen Andrade Porfirio",
+        "Thaynara Cristina Maia dos Santos"
+    ],
+    sensors: [
+        "3 sensores ultrassônicos - Detecção de veículos por distância"
+    ],
+    technologies: [
+        "ESP32",
+        "Wokwi",
+        "ThingSpeak"
+    ],
+    components: [
+        "ESP32",
+        "3 LEDs verdes",
+        "3 LEDs vermelhos",
+        "Display LCD 16x2",
+        "Módulo I2C",
+        "Fios de conexão"
+    ],
+    status: "Projeto Desenvolvido",
+    metadata: {
+        institution: "Etec de Campo Limpo Paulista",
+        course: "Informática para a Internet integrado ao Ensino Médio",
+        platform: "ThingSpeak",
+        totalParkingSpaces: 3,
+        detectionDistance: "50 cm",
+        lcdDimensions: "16x2",
+        sensorTrigPins: ["GPIO 12", "GPIO 14", "GPIO 26"],
+        sensorEchoPins: ["GPIO 13", "GPIO 27", "GPIO 25"],
+        greenLedPins: ["GPIO 17", "GPIO 19", "GPIO 23"],
+        redLedPins: ["GPIO 16", "GPIO 18", "GPIO 5"],
+        monitoring: "Vagas livres, vagas ocupadas e taxa de ocupação"
+    },
+    links: {
+        wokwi: "https://wokwi.com/projects/480709895998374913",
+        thingspeak: "https://thingspeak.mathworks.com/channels/3573944"
+    },
+    thingspeak: {
+        channelId: "3573944",
+        readApiKey: "",
+        results: 20,
+        refreshInterval: 20000,
+        fields: [
+            { number: 1, name: "Vagas livres", unit: "" },
+            { number: 2, name: "Vagas ocupadas", unit: "" },
+            { number: 3, name: "Taxa de ocupação", unit: "%" }
+        ]
+    }
+},
+
 {
     id: 5,
     group: "Grupo 05",
